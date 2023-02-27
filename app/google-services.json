@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "83859644658",
+    "project_id": "kotiln-board",
+    "storage_bucket": "kotiln-board.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83859644658:android:9357997793d3fb160e306b",
+        "android_client_info": {
+          "package_name": "com.example.kotlinboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83859644658-g5f78536mtigmain3pcveq5iuhfm93cb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kotlinboard",
+            "certificate_hash": "8a6b3c3a9eed4c65300a0811b1ffa958de5d4078"
+          }
+        },
+        {
+          "client_id": "83859644658-k5pfkg3j6honjp2lmv884ju8kj22k68n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5J2W-cEuzCVjB6cz1YXkPU0FBKRxo8VQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83859644658-k5pfkg3j6honjp2lmv884ju8kj22k68n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
