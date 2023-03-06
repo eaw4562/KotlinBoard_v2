@@ -9,6 +9,7 @@ import com.example.kotlinboard.databinding.ActivitySignUpAcitivtyBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class SignUpAcitivty : AppCompatActivity() {
@@ -24,8 +25,11 @@ class SignUpAcitivty : AppCompatActivity() {
         binding = ActivitySignUpAcitivtyBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         //인증 초기화
         fAuth = Firebase.auth
+
+        mDbRef = Firebase.database.reference
 
         binding.btnSignup.setOnClickListener{
             val name = binding.editName.text.toString().trim()
@@ -46,7 +50,7 @@ class SignUpAcitivty : AppCompatActivity() {
                     Toast.makeText(this, "회원가입 성공", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
-                    addUserToDatabase(name,id,password)
+                    addUserToDatabase(name,id,password, fAuth.currentUser?.uid!!)
                 }else{
                     //회원가입 실패
                     Toast.makeText(this,"회원가입 실패",Toast.LENGTH_SHORT).show()
@@ -55,7 +59,7 @@ class SignUpAcitivty : AppCompatActivity() {
             }
     }
 
-    private fun addUserToDatabase(name: String, id: String, uId: String) {
-        mDbRef.child("user").child(uId).setValue(User(name,id,uId))
+    private fun addUserToDatabase(name: String, id: String,password: String,uId: String) {
+        mDbRef.child("user").child(uId).setValue(User(name,id,password,uId))
     }
 }

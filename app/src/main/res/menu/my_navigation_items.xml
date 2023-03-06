@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/list"
+        android:icon="@drawable/unselected_list_icon_24"
+        android:enabled="true"
+        android:title="list"/>
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_timer_off_24"
+        android:enabled="true"
+        android:checked="true"
+        android:title="home"/>
+    <item
+        android:id="@+id/user"
+        android:icon="@drawable/unselected_home_icon_24"
+        android:enabled="true"
+        android:title="user"/>
+</menu>

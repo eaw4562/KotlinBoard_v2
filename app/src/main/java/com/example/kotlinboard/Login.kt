@@ -20,8 +20,10 @@ class Login : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //인증 초기화
         fAuth = Firebase.auth
 
+        //로그인 버튼 클릭 이벤트
         binding.btnLogin.setOnClickListener{
 
             val id = binding.editId.text.toString()
@@ -30,6 +32,7 @@ class Login : AppCompatActivity() {
             login(id,password)
         }
 
+        //회원가입 버튼 클릭 이벤트
         binding.btnJoin.setOnClickListener {
             val intent = Intent(this, SignUpAcitivty::class.java)
             startActivity(intent)

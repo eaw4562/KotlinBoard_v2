@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".SignUpAcitivty">
 
-
     <EditText
         android:layout_marginTop="50dp"
         android:id="@+id/edit_name"
@@ -47,6 +46,5 @@
 
         android:layout_below="@+id/edit_pass"
         android:hint="회원가입"/>
-
 
 </RelativeLayout>
