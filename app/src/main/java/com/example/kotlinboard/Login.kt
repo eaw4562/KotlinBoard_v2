@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.kotlinboard.board.BoardActivity
 import com.example.kotlinboard.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -45,7 +46,7 @@ class Login : AppCompatActivity() {
             .addOnCompleteListener(this){ task->
                 if(task.isSuccessful){
                     //로그인 성공
-                    val intent = Intent(this@Login, MainActivity::class.java)
+                    val intent = Intent(this, BoardActivity::class.java)
                     startActivity(intent)
                     Toast.makeText(this,"로그인 성공", Toast.LENGTH_SHORT).show()
                     finish()

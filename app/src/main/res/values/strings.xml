@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">맹준 게시판</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
