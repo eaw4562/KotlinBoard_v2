@@ -1,13 +1,9 @@
 package com.example.kotlinboard.board
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract.Data
-import android.view.LayoutInflater
 import android.view.Menu
-import android.view.MenuInflater
-import androidx.appcompat.widget.Toolbar
-import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlinboard.R
 import com.example.kotlinboard.databinding.ActivityBoardBinding
@@ -22,7 +18,7 @@ class BoardActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //툴바 설정
-        var toolbar = binding.toolbar
+        val toolbar = binding.toolbar
         setSupportActionBar(toolbar)
 
         //툴바에 메뉴 등록
@@ -40,8 +36,13 @@ class BoardActivity : AppCompatActivity() {
         boardAdapter = BoardAdapter(DummyBoardData.listOfBoard)
         binding.mRecyclerView.adapter = boardAdapter
 
+        binding.btnWrite.setOnClickListener {
+            val intent = Intent(this,writeActivity::class.java)
+            startActivity(intent)
+        }
 
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.item_toolbar, menu)

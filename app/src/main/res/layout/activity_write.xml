@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".board.writeActivity">
+
+
+    <ImageButton
+        android:id="@+id/btn_camera"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.4dp"
+        android:background="#4682B4"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:inputType="text"
+        android:hint="글 제목" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.4dp"
+        android:background="#4682B4"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/transparent"
+            android:hint="가격"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+
+            <Button
+                android:id="@+id/myButton"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/checkbox_button"/>
+
+            <TextView
+                android:id="@+id/tv_nanum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="12sp"
+                android:text="나눔" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.4dp"
+        android:background="#4682B4"/>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:hint="게시물 본물에 작성할 내용을 적어주세요."
+        android:inputType="text"
+        android:lines="6" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.4dp"
+        android:background="#4682B4"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_deal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="18sp"
+        android:layout_weight="2"
+        android:text="거래 희망 장소" />
+
+        <Button
+            android:id="@+id/btn_writemap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_gravity="right|bottom"
+            android:text="장소 선택 > " />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.4dp"
+        android:background="#4682B4"/>
+
+
+    <Button
+        android:id="@+id/btn_writesubmit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="작성완료"
+        android:background="@android:color/darker_gray"/>
+
+
+
+
+</LinearLayout>
